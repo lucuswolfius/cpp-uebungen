@@ -22,7 +22,7 @@ void Player::printStatus()
     cout << '-' << setw(120) << setfill('-') << '-' << endl;
     cout << "Name: " << this->getName() << endl;
     cout << "Lives: " << this->getLifes() << endl;
-    cout << "Energy: " << this->getEnergy() << endl; 
+    cout << "Energy: " << this->getEnergy() * 100 << '%' << endl; 
 }
 void Player::setEnergy(float newEnergyLevel)
 {
