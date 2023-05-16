@@ -6,7 +6,7 @@ int main(void)
 {
     Player player;
     player.printStatus();
-    player.setEnergy(0.5);
+    player.setEnergy(0.3);
     player.printStatus();
 
     return EXIT_SUCCESS;

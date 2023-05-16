@@ -1,6 +1,6 @@
 #include <string>
 
-#ifndef PLAYER_H
+#ifndef PLAYER_H    //Guard
 #define PLAYER_H
 
 class Player
@@ -13,7 +13,8 @@ class Player
     void setEnergy(float newEnergyLevel);
     int addLives(int amount);
     int removeLives(int amount);
-    void changeEnergy(float amount);    //Use negatives to remove energy
+    void changeEnergy(float amount);
+    void watch_energy();
 
     private:
     std::string name = "Xaviett Morgentau";
@@ -21,4 +22,4 @@ class Player
     float energy = 1.f;
 };
 
-#endif
+#endif  //End of guard

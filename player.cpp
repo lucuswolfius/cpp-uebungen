@@ -24,9 +24,10 @@ void Player::printStatus()
     cout << "Lives: " << this->getLifes() << endl;
     cout << "Energy: " << this->getEnergy() * 100 << '%' << endl; 
 }
-void Player::setEnergy(float newEnergyLevel)
+void Player::setEnergy(float amount)
 {
-    energy = newEnergyLevel;
+    energy -= amount;
+    watch_energy();
 }
 int Player::addLives(int amount)
 {
@@ -50,4 +51,17 @@ int Player::removeLives(int amount)
 void Player::changeEnergy(float amount)
 {
     energy += amount;
+    watch_energy();
+}
+void Player::watch_energy()
+{
+    if (energy <= 0)
+    {
+        energy = 1;
+        removeLives(1);
+    }
+    else if (energy > 1)
+    {
+        energy = 1;
+    }
 }
