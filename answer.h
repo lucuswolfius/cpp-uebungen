@@ -6,13 +6,13 @@
 class Answer
 {
     private:
-    std::string answer = "";
-    int votes = 0;
+    std::string answer;
+    int votes;
 
     public:
     friend class Poll;
     Answer();
-    Answer(std::string newAnswer, int voteAmount);
+    Answer(std::string newAnswer);
     void get_answer();
     void get_vote();
 };

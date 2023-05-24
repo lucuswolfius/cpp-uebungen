@@ -4,10 +4,14 @@
 
 using namespace std;
 
-Answer::Answer(string newAnswer, int voteAmount)
+Answer::Answer()
+{
+    answer = "";
+    votes = 0;
+}
+Answer::Answer(string newAnswer)
 {
     answer = newAnswer;
-    votes = voteAmount;
 }
 void Answer::get_answer()
 {
